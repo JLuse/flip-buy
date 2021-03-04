@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavLink, Link} from 'react-router-dom';
+// import {NavLink, Link} from 'react-router-dom';
 import './header.css'
 
 
@@ -20,7 +20,7 @@ const Header = (props) => {
         <div className="link-container">
           <div className="sign-in">
             {/* <NavLink to="/sign-in"><Signin /></NavLink> */}
-            {props.isLoggedin ? 'Logout' : 'Sign-in'}
+            {props.isLogin ? 'Logout' : 'Sign-in'}
           </div>
         </div>
       </nav>

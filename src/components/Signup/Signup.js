@@ -12,15 +12,15 @@ class Signup extends Component {
 
   // when the user submits the form
   handleSignup = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     // update the state in App to logged in
-    console.log(this.props)
+    this.props.isLogin(true)
   }
 
   handleChange = (e) => {
     // extract name attribute and corresponding value 
-    const {name, value} = e.target;
-    this.setState({[name]:value});
+    const {name, value} = e.target
+    this.setState({[name]:value})
   }
 
   render () {
@@ -30,7 +30,7 @@ class Signup extends Component {
           {/* Will make component for this */}
           <h1>Welcome to FlipBuy</h1>
         </div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSignup}>
           <input 
             type="email" 
             name="email" 
